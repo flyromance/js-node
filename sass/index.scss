@@ -1,0 +1,14 @@
+@import "./common.scss";
+
+// 放在这里会覆盖 上面声明的，包括文件中引入的
+$dd: green; 
+
+.foo {
+  color: $dd;
+
+  ::global {
+    .bar {
+      color: skyblue;
+    }
+  }
+}
